@@ -1,0 +1,1067 @@
+/*--- css for final project ---*/
+
+/*================================================================================================*/
+/*                                            Global                                              */
+/*================================================================================================*/
+
+html {
+    background-color: #000;
+    color: #fff;
+}
+
+body {
+    padding-top: 100px;
+    background-color: #000;
+    position: relative;
+}
+
+@font-face {
+    font-family: font1;
+    src: url(../fonts/LANENAR_.ttf);
+}
+
+button:focus,
+a:focus {
+    outline:0;
+}
+
+.float {
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.float:hover {
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+
+/* Float Shadow */
+.float-shadow {
+  display: inline-block;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.float-shadow:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  /* W3C */
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform, opacity;
+  transition-property: transform, opacity;
+}
+.float-shadow:hover, .float-shadow:focus, .float-shadow:active {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  /* move the element up by 5px */
+}
+.float-shadow:hover:before, .float-shadow:focus:before, .float-shadow:active:before {
+  opacity: 1;
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+  /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+}
+
+/*=======   Header   =======*/
+header h1 {
+    float: left;
+}
+
+header ul {
+    float: right;
+    margin-top: 35px;
+}
+
+header ul li {
+    display: inline;
+    padding: 40px 0 40px 0px;
+    font-family: 'Helvetica Neue, Helvetica, Liberation Sans, Arial', sans-serif;
+    font-size: 14pt;
+}
+
+header ul li a:visited {
+    border: none;
+    text-decoration: none;
+}
+
+header ul li a:hover {
+    background-color: #2e2e2e;
+    text-decoration: none !important;
+    color: #e6e6e6;
+}
+
+header ul li a:active {
+    text-decoration: none;
+    color: #ffc638;
+}
+
+header ul li a {
+    color: #33a1c9;
+    padding: 40px 15px 40px 15px;
+}
+
+header {
+    height: 100px;
+}
+
+.navbar-inverse {
+    background-color: #000;
+}
+
+h1 {
+    margin-top: 0px;
+    color: #e6e6e6;
+    font-size: 24pt;
+    font-family: 'font1', sans-serif;
+}
+
+h1 span {
+    color: #33a1c9;
+    font-family: 'Helvetica Neue, Helvetica, Liberation Sans, Arial', sans-serif;
+    font-size: 24pt;
+    font-weight: lighter;
+}
+
+.current {
+    color: #e6e6e6;
+    background-color: #2e2e2e;
+}
+
+/*=======   Footer   =======*/
+
+
+footer {
+    color: #4d4d4d;
+    bottom: -40px;
+    background-color: #000;
+    z-index: 1;
+    position: inherit;
+}
+
+footer ul li a {
+    color: #33a1c9;
+    padding: 0 0 0 10px;
+    font-family: 'Helvetica Neue, Helvetica, Liberation Sans, Arial', sans-serif;
+    font-size: 14pt;
+    font-weight: lighter;
+}
+
+footer ul li a:hover {
+    text-decoration: none !important;
+    color: #e6e6e6;
+}
+
+#footerpages {
+    float: left;
+    margin-left: 7.3018081%;
+}
+
+footer p {
+    text-align: center;
+    padding-bottom: 0;
+    margin: 0 auto;
+    clear: both;
+}
+
+#footerlinks {
+    float: right;
+    margin-right: 12.3018081%;
+}
+
+footer ul li {
+    display: inline;
+}
+
+center a {
+    color: #4d4d4d;
+}
+
+
+/*================================================================================================*/
+/*                                            Index.html                                          */
+/*================================================================================================*/
+
+/*======= CTA Photo   =======*/
+#ctaphoto {    
+    width: 100%;
+    margin: 0;
+    height: 100%;
+    z-index: 3;
+    padding-bottom: 50px;
+}
+
+#ctaphoto {
+    width: 100%;
+    margin: auto;
+}
+/*
+#ctaphoto {
+    height: 450px;
+    position: fixed;
+    
+}
+*/
+
+/*=======   Why Me   =======*/
+
+h2 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #e6e6e6;
+    font-size: 2.5em;/*30pt*/
+    text-align: center;
+}
+
+#whyme {
+    margin: 0px 7.3018081% 75px 7.3018081%;/*original height 25px original width 7.3018081%*/
+    background-color: #000;
+    width: auto;
+    z-index: 1;
+    height: 100%;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+
+
+#whyme .row .col-md-4 {
+    padding: 0 9% 0 9%;/*60px*/
+}
+
+#whyme p {
+    padding: 0 0 0 20%;
+    font-family: 'font1', sans-serif;
+    font-size: 21pt;
+    color: #ececec;
+    text-align: center;
+}
+
+#whyme div div p {
+    width: 100%;
+    padding: 0;
+    
+}
+
+/*======= Recent Projects   =======*/
+#recentprojects {
+    margin: 0 7.3018081% 50px 7.3018081%;
+    background-color: #000;
+    z-index: 2;
+    height: 100%;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+#recentprojects .row {
+    margin-top: 25px;
+}
+
+/*======= About Me   ========*/
+
+#aboutme img {  
+    padding-bottom: 20px;
+}
+
+#aboutme p, #aboutme ul li {
+    font-family: 'Helvetica Neue, Helvetica, Liberation Sans, Arial', sans-serif;
+    font-size: 14pt;
+    color: #989898;
+}
+
+#aboutme ul {
+    padding: 0 15px 0 15px;
+}
+
+#aboutme ul ul {
+    padding: 0;
+}
+
+#aboutme {
+    margin: 0 105px 100px 105px;
+    background-color: #000;
+    z-index: 9;
+    height: 600px;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+#aboutme h3 {
+    margin-top: 0;
+    text-align: center;
+    font-family: 'font1', sans-serif;
+    font-size: 1.5em;/*21pt*/
+    color: #ececec; 
+}
+
+
+
+/*================================================================================================*/
+/*                                            Portfolio.html                                      */
+/*================================================================================================*/
+
+#portfolio {
+    margin-top: 125px;
+}
+
+#portfolio ul {
+    margin: 0;
+    padding: 0 0 0 0;
+    list-style-type: none;
+}
+
+#portfolio ul:last-child {
+    padding: 0;
+}
+
+#portfolio ul li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+#portfolio ul li button {
+    width: auto;
+    padding: 5px 15px 0 15px;
+    height: 25px;
+    font-size: 10pt;
+    /*border-radius: 5px;*/
+    background-color: #ffc638;
+    color: #323232;
+    border: none;
+    font-family: 'Helvetica Neue, Helvetica, Liberation Sans, Arial', sans-serif;
+}
+
+#portfolio ul li a button:hover {
+    background-color: #222;
+}
+
+#portfolio button:hover {
+    color: #e6e6e6;
+}
+
+
+/* new gallery  */
+img.background {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    padding: 0;
+    border: none;
+}
+
+.photos {
+    margin: 0 auto;/*13.88888%  15.14236%*/
+}
+
+.sorting {
+    text-align: center;
+    margin: 0 auto;/* 17.14236% */
+}
+
+.sorting-buttons ul li {
+    padding: 0;
+}
+
+
+
+.gallery .sorting div {
+    margin: 10px 0 10px 0px;
+}
+
+
+
+.gallery .photos .thumbnail_container {
+    position: relative;
+    width: 1220px;
+    margin: 0 auto;
+}
+
+.gallery .photos .thumbnail_container a.thumbnail {
+    position: absolute;
+}
+
+.gallery .photos .thumbnail_container a.thumbnail img {
+    width: 292.5px;/*292.5px*/
+    height: 231.25px;/*231.25px*/
+}
+
+.showMe,
+.hideMe {
+    border: none;
+    padding: 0;
+}
+
+
+/*================================================================================================*/
+/*                                            Pricing.html                                        */
+/*================================================================================================*/
+
+#pricingtable {
+    margin: 125px 7.3018081% 0 7.3018081%;
+}
+
+#pricingtable .row .col-md-4 {
+    padding: 0;
+}
+
+#pricingtable .row {
+    padding: 0 0 1.73611% 0;/*25px*/
+}
+
+#pricingtable h3,
+#portfolio h4 {
+    margin-top: 0;
+    text-align: center;
+    font-family: 'font1', sans-serif;
+    font-size: 2em;/*21pt*/
+    color: #ececec; 
+}
+
+#pricingtable h4 {
+    color: #888;
+}
+
+ ul li {
+    color: #ebebeb;
+    list-style-type: none;
+    font-size: 1.5em;/*18pt*/
+}
+
+.essential {
+    background-color: #666666;
+    min-height: 600px;
+    
+    margin: 0 12px 0 12px;
+}
+
+.plus {
+    background-color: #4d4d4d;
+    min-height: 600px;
+    
+    margin: 0 12px 0 12px;
+}
+
+.luxury {
+    background-color: #323232;
+    margin: 0 12px 0 12px;
+    min-height: 600px;
+}
+
+.circle {
+    position: relative;
+    width:150px;
+    height:150px;
+    border-radius:150px;
+    font-size:40px;
+    color:#fff;
+    line-height:150px;
+    text-align:center;
+    background:#000000;
+    margin: 35px 30.56994% 0 30.56994%;/*125px 30.88%*/
+}
+
+.top {
+    padding: 10px 0 0 0;
+    text-align: center;
+}
+
+.bottom {
+    text-align: left;
+    margin: 40px 0 10px 50px;
+}
+
+.bottom p {
+    padding: 0 5% 0 5%;/*25px*/
+    font-size: 1em;
+}
+
+#pricingtable button {
+    text-align: center;
+    width: 51.81347%;/*200px*/
+    height: 50px;
+    background-color: #ffc638;
+    color: #323232;
+    border: none;
+    font-family: 'Helvetica Neue, Helvetica, Liberation Sans, Arial', sans-serif;
+    font-size: 1.29em;/*18pt*/
+    color: #323232;
+    bottom: 3.3333%;/*20px*/
+    position: absolute;
+    margin: 0 0 0 22%;/*100px*/
+    padding: 10px 0 25px 0;
+}
+
+#pricingtable button:hover {
+    background-color: #222;
+    color: #ececec;
+}
+
+.cyosubheading li {
+    display: inline-block;
+    text-align: center;
+    padding: 0 25px 0 25px;
+}
+
+.cyosubheading {
+    text-align: center;
+}
+
+.cyo {
+    margin: 25px 15% 25px 15%;
+}
+
+
+#accordian ul ul {
+    display: none;
+    height: auto;
+}
+
+#collapse * {
+    display:block;
+    list-style:none;
+    cursor:pointer;
+    text-transform:uppercase;
+}
+#collapse ul li {
+}
+.open{}
+
+
+/*================================================================================================*/
+/*                                            KindWords.html                                      */
+/*================================================================================================*/
+
+#kindwords {
+    margin: 125px 7.3018081% 0 7.3018081%;
+}
+
+#kindwords  p {
+    font-family: 'Helvetica Neue, Helvetica, Liberation Sans, Arial', sans-serif;
+    font-size: 14pt;
+    font-weight: lighter;
+    color: #979797;
+}
+
+#kindwords img {
+    margin-bottom: 75px;
+}
+
+#kindwords h2 {
+    margin-bottom: 25px;
+}
+
+/*================================================================================================*/
+/*                                           FAQ.html                                             */
+/*================================================================================================*/
+
+ #faq {
+    margin: 125px 7.3018081% 0 7.3018081%;
+ }
+ 
+ #faq  ul li {
+    font-family: 'Helvetica Neue, Helvetica, Liberation Sans, Arial', sans-serif;
+    font-size: 16pt;
+    font-weight: lighter;
+    color: #979797;
+}
+
+#faq ul li span {
+    font-weight: bold;
+}
+
+#faq h2 {
+    margin-bottom: 50px;
+}
+
+#collapse-faq * {
+    display:block;
+    list-style:none;
+    cursor:pointer;
+}
+
+.open{}
+
+   #collapse-faq {
+        margin: 0 auto;
+        width: 100%;
+        padding: 15px 0 15px 0;
+   }
+   
+   #collapse-faq li {
+        padding: 5px 10% 5px 10%;
+   }
+   
+   #collapse-faq li ul li {
+        padding: 5px 0 5px 25px;
+   }
+   
+   #collapse-faq li ul {
+        padding: 0;
+   }
+   
+   #collapse-faq h4 {
+    color: #dbdbdb;
+   }
+   
+   #collapse-faq p {
+        font-size: 12pt;
+   }
+   
+   
+   .essential-collapse li ul li,
+   .plus-collapse li ul li,
+   .luxury-collapse li ul li {
+        color: #000;
+   }
+   
+
+/*================================================================================================*/
+/*                                             Contact                                            */
+/*================================================================================================*/
+
+#myModal {
+    margin-left: -200px;
+}
+
+#myModal h4 {
+    text-align: center;
+}
+
+.modal-content {
+    background-color: #6c6c6c;
+    /*background-image: url('../images/contactTexture.jpg');*/
+    background-size: 100% 100%;
+    width: 760px;
+    border-radius: 0;
+}
+
+.modal-header span {
+    text-align: center;
+    /*margin: 0 0 0 75%;*/
+    color: #000000;
+}
+
+.modal-title {
+    text-align: center;
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+    border: none;
+}
+
+.modal-body form {
+    width: 400px;
+    margin-left: 23.68421%;
+}
+
+.modal input,
+.form-control {
+    border-radius: none;
+    border: none;
+}
+
+.modal-footer button {
+    background-color: #ffc638;
+    color: #323232;
+    border-radius: 0;
+    font-size: 24pt;
+    border: none;
+}
+
+.modal-footer button:hover {
+    background-color: #323232;
+}
+
+#recaptcha_area {
+    margin-left: 20%;
+}
+
+/*================================================================================================*/
+/*                                             Media Queries                                      */
+/*================================================================================================*/
+
+
+
+/*==================  Horizontal  ==================*/
+
+@media screen and (min-width:50px) and (max-width:500px){
+    #whyme {
+        display: none;
+   }
+   
+    #main-nav {
+        clear: both;
+        background-color: #000;
+        margin: -45px 0 0 0;/*-70px top when displayed block 'vertically'*/
+        padding: 0 5px 0 5px;
+        width: 100%;
+        text-align: center;
+        
+    }
+    
+    #main-nav li {
+        padding: 5px 0 5px 0;
+        width: 100%;
+        margin: 0;
+    }
+    
+    header ul li {
+        display: block;
+        margin: 0;
+    }
+    
+    header ul {
+        /*padding: 0 2px 0 2px;*/
+    }
+    
+    header ul li a {
+        padding: 9px 20px 9px 20px;
+        margin: 0;
+        overflow-x: hidden;
+    }
+    
+    #recentprojects img {
+        padding-bottom: 10px;
+   }
+   
+   #aboutme ul,
+   #aboutme img {
+        display: none;
+   }
+   
+   #aboutme {
+        margin: 0 auto;
+        padding: 20px;
+        overflow: inherit;
+   }
+   
+   .sign button {
+        text-align: center;
+        width: 51.81347%;/*200px*/
+        height: 50px;
+        background-color: #ffc638;
+        color: #323232;
+        border: none;
+        font-family: 'Helvetica Neue, Helvetica, Liberation Sans, Arial', sans-serif;
+        font-size: 1.29em;/*18pt*/
+        color: #323232;
+        margin: 0 0 0 22%;/*100px*/
+        padding: 10px 0 25px 0; 
+   }
+   
+   .sign button:hover {
+        background-color: #222;
+        color: #ececec;
+   }
+   
+    .cyo,
+   #pricingtable {
+        display: none;
+   }
+   
+   #collapse {
+        margin: 0 auto;
+        width: 100%;
+        padding: 15px 0 15px 0;
+   }
+   
+   #collapse li {
+        padding: 5px 10% 5px 10%;
+   }
+   
+   #collapse h4 {
+    color: #dbdbdb;
+   }
+   
+   #collapse p {
+        font-size: 12pt;
+   }
+   
+   .essential-collapse {
+        background-color: #666666;
+   }
+   
+   .plus-collapse {
+        background-color: #4d4d4d;
+   }
+   
+   .luxury-collapse {
+        background-color: #323232;
+   }
+   
+   .essential-collapse li ul li,
+   .plus-collapse li ul li,
+   .luxury-collapse li ul li {
+        color: #000;
+   }
+   
+    #collapse-faq li ul li p {
+        width: 100%;
+        padding: 5px 0 5px 0;
+        margin: 0;
+        
+   }
+   
+   footer {
+        bottom: auto;
+        margin: 350px 0 0 0;
+   }
+   
+    #footerpages,
+    #footerlinks {
+        clear: both;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+   }
+   
+    footer p {
+        padding: 15px 0 15px 0;
+   }
+
+   .modal-footer button {
+        margin-left: -200px;
+   }
+   
+    .gallery .photos .thumbnail_container a.thumbnail img {
+        width: 117px;/*73.125px;292.5px*/
+        height: 92.5px;/*57.81px;231.25px*/
+    }
+    
+    .gallery .photos, .sorting {
+        padding: 0 0 0 2px;
+        margin: 0 0 0 40px;
+    }
+    
+    #portfolio {
+    margin-top: 25px;
+}
+    
+    
+}
+
+
+
+
+@media screen and (min-width:501px) and (max-width:768px){
+    #whyme {
+        display: none;
+   }
+    
+    #main-nav {
+        clear: both;
+        background-color: #000;
+        margin-top: -45px;/*-70px when displayed block 'vertically'*/
+        padding: 0 5px 0 5px;
+    }
+    
+    #main-nav li {
+        padding: 5px ;
+    }
+    
+    header ul li {
+        display: inline;
+        margin: 0 auto;
+    }
+    
+    header ul {
+        padding: 0 2px 0 2px;
+    }
+    
+    header ul li a {
+        padding: 9px 20px 9px 20px;
+        margin: 0;
+        overflow-x: hidden;
+    }
+    
+    #recentprojects img {
+        padding-bottom: 10px;
+   }
+   
+    #aboutme ul,
+    #aboutme img {
+        display: none;
+   }
+   
+    #aboutme {
+        margin: 0 auto;
+        padding: 20px;
+        overflow: hidden;
+   }
+   
+    .sign button {
+        text-align: center;
+        width: 51.81347%;/*200px*/
+        height: 50px;
+        background-color: #ffc638;
+        color: #323232;
+        border: none;
+        font-family: 'Helvetica Neue, Helvetica, Liberation Sans, Arial', sans-serif;
+        font-size: 1.29em;/*18pt*/
+        color: #323232;
+        margin: 0 0 0 22%;/*100px*/
+        padding: 10px 0 25px 0; 
+   }
+   
+   .sign button:hover {
+        background-color: #222;
+        color: #ececec;
+   }
+   
+    .cyo,
+   #pricingtable {
+        display: none;
+   }
+   
+   #collapse {
+        margin: 0 auto;
+        width: 100%;
+        padding: 15px 0 15px 0;
+   }
+   
+   #collapse li {
+        padding: 5px 10% 5px 10%;
+   }
+   
+   #collapse h4 {
+    color: #dbdbdb;
+   }
+   
+   #collapse p {
+        font-size: 12pt;
+   }
+   
+   .essential-collapse {
+        background-color: #666666;
+   }
+   
+   .plus-collapse {
+        background-color: #4d4d4d;
+   }
+   
+   .luxury-collapse {
+        background-color: #323232;
+   }
+   
+   .essential-collapse li ul li,
+   .plus-collapse li ul li,
+   .luxury-collapse li ul li {
+        color: #000;
+   }
+   
+    #collapse-faq li ul li p {
+        width: 100%;
+        padding: 5px 0 5px 0;
+        margin: 0;
+        
+   }
+   
+   #footerpages,
+   #footerlinks {
+        clear: both;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+   }
+   
+   footer p {
+        padding: 15px 0 15px 0;
+   }
+
+    #myModal {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .gallery .photos .thumbnail_container a.thumbnail img {
+        width: 117px;/*292.5px*/
+        height: 92.5px;/*231.25px*/
+    }
+    
+}
+
+
+@media screen and (min-width:769px) and (max-width:960px){
+   
+   #collapse,
+   #whyme {
+        display: none;
+   }
+   
+   #recentprojects img {
+    padding-bottom: 10px;
+   }
+   
+   #aboutme {
+    overflow: hidden;
+   }
+   
+   #aboutme img {
+    display: none;
+   }
+   
+   #aboutme {
+    margin: 0 auto;
+    padding: 0 15px 0 15px;
+   }
+   
+   #aboutme .sign {
+    display: none;
+   }
+   
+   .gallery .photos .thumbnail_container a.thumbnail img {
+    width: 175.5px;/*292.5px*/
+    height: 138.75px;/*231.25px*/
+    }
+    
+    #portfolio {
+        margin: 0 auto;
+    }
+
+   
+}
+
+
+@media screen and (min-width:960px){
+    #aboutme .sign {
+        display: none;
+    }
+    
+    #collapse {
+        display: none;
+    }
+    
+
+}
+
+
+
+
+
+
+
+
